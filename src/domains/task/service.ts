@@ -9,7 +9,9 @@ const create = (newTask = {
 }
 
 const all = () => {
-    return model.find();
+    return model.find({
+        removed: false
+    });
 }
 
 const remove = async (id = "") => {
