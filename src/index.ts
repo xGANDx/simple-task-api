@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://api:ZzuzSM60ub0LkH9W@simple-task.obgny.mongodb.n
 
 app.use('/task', task);
 
-const port = 3001
+const port = process.env.PORT || 3001
 app.listen(port, () => {
     console.log(`Run -> ${port}`)
 })
